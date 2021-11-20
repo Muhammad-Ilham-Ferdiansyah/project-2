@@ -1,0 +1,96 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+.desc{
+    max-width: 400px;
+}
+
+.display-1{
+  font-size: 37px;
+}
+
+.tebel-banget {
+  font-weight: bold;
+}
+
+.tebel-sedang {
+  font-weight: 700;
+}
+
+.button {
+    background-color: rgb(165, 160, 250);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .button:hover {
+    background-color: rgb(111, 106, 204);
+    color: white;
+  }
+
+.gambar{
+  display: none;
+  
+}
+
+.img{
+  width:600px;
+  z-index: -1;
+}
+
+.link{
+  color: gray;
+  transition: 0.3s;
+}
+
+.link:hover{
+  color: rgb(165, 160, 250);
+}
+
+@media screen and (max-width: 600px) {
+  .img{
+    display: none;
+    width: 500px;
+  }
+
+  .gambar{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .img{
+    display: none;
+    width: 500px;
+  }
+
+  .gambar{
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+  .img{
+    width: 500px;
+    z-index: -1;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .img{
+    width: 300px;
+    z-index: -1;
+  }
+
+}
+
+
+
+
