@@ -17,6 +17,10 @@
   font-weight: 700;
 }
 
+.text-kecil {
+  font-size: 0.9rem;
+}
+
 .button {
     background-color: rgb(87, 78, 253);
     border: none;
@@ -49,7 +53,7 @@
 }
 
 .link:hover{
-  color: rgb(165, 160, 250);
+  color: rgb(87, 78, 253);
 }
 
 @media screen and (max-width: 600px) {

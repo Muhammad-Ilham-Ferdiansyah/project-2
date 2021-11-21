@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light mt-4">
     <div class="container">
-        <a class="navbar-brand m-3" href="#">
+        <a class="navbar-brand m-3" href="/">
             SIPMA BUMN
         </a>
         <button class="navbar-toggler mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -22,7 +22,7 @@
                     <a class="nav-link link tebel-sedang" href="#">Contact &nbsp;&nbsp;</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active tebel-sedang rounded-pill bg-ungu shadow" href="#">Login</a>
+                    <a class="nav-link active tebel-sedang rounded-pill bg-ungu shadow" href="/login">Login</a>
                 </li>
             </ul>
         </div>

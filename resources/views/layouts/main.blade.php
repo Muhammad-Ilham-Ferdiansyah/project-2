@@ -13,6 +13,7 @@
     <!-- CSS Lainnya -->
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/body.css">
+    <link rel="stylesheet" href="/css/components.css">
 
     <!-- Font Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,12 +31,20 @@
         @yield('container')
     </div>
 
+    {{-- Stisla setup --}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="../assets/js/stisla.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
+    <!-- Template JS File -->
+    <script src="/js/scripts.js"></script>
+    <script src="/js/custom.js"></script>
 </body>
 
 </html>

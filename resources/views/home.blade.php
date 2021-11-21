@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="tombol mt-5">
-                    <a href="#" class="button rounded-pill shadow tebel-sedang">REGISTER</a>
+                    <a href="/register" class="button rounded-pill shadow tebel-sedang">REGISTER</a>
                 </div>
 
 
