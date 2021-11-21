@@ -1,8 +1,8 @@
 .bg-ungu{
-    background-color: rgb(165, 160, 250) !important;
+    background-color: rgb(87, 78, 253) !important;
     transition: 0.3s;
 }
 
 .bg-ungu:hover {
-    background-color:rgb(111, 106, 204) !important;
+    background-color:rgb(52, 44, 201) !important;
   }

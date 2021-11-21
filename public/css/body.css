@@ -18,7 +18,7 @@
 }
 
 .button {
-    background-color: rgb(165, 160, 250);
+    background-color: rgb(87, 78, 253);
     border: none;
     color: white;
     padding: 16px 32px;
@@ -29,7 +29,7 @@
   }
   
   .button:hover {
-    background-color: rgb(111, 106, 204);
+    background-color: rgb(52, 44, 201);
     color: white;
   }
 
