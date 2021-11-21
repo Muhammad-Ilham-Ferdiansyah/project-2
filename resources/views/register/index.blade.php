@@ -13,44 +13,61 @@
                             </div>
 
                             <div class="card-body">
-                                <form method="POST" action="#">
+                                <form method="post" action="/register">
+                                    @csrf
                                     <div class="row">
                                         <div class="form-group">
                                             <label for="name" class="mb-2">Nama Lengkap</label>
-                                            <input id="name" type="text" class="form-control mb-3" name="name" required
-                                                autofocus>
+                                            <input name="name" type="text"
+                                                class="form-control mb-3 @error('name') is-invalid @enderror" id="name"
+                                                value="{{ old('name') }}" required autofocus>
+                                            @error('name')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
 
                                     <div class="row">
                                         <div class="form-group">
                                             <label for="npm" class="mb-2">NPM</label>
-                                            <input id="npm" type="text" class="form-control mb-3" name="npm" required
-                                                autofocus>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="email" class="mb-2">Email</label>
-                                        <input id="email" type="email" class="form-control mb-3" name="email">
-                                        <div class="invalid-feedback">
+                                            <input id="npm" type="text"
+                                                class="form-control mb-3 @error('npm') is-invalid @enderror" name="npm"
+                                                value="{{ old('npm') }}" required>
+                                            @error('npm')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="form-group col-6">
-                                            <label for="password" class="d-block mb-2">Password</label>
-                                            <input id="password" type="password" class="form-control pwstrength"
-                                                data-indicator="pwindicator" name="password">
-                                            <div id="pwindicator" class="pwindicator">
-                                                <div class="bar"></div>
-                                                <div class="label"></div>
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="email" class="mb-2">Email</label>
+                                            <input id="email" type="email"
+                                                class="form-control mb-3 @error('email') is-invalid @enderror" name="email"
+                                                value="{{ old('email') }}" required>
+                                            @error('email')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
-                                        <div class="form-group col-6">
-                                            <label for="password2" class="d-block mb-2">Password Confirmation</label>
-                                            <input id="password2" type="password" class="form-control"
-                                                name="password-confirm">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="password" class="d-block mb-2">Password</label>
+                                            <input id="password" type="password"
+                                                class="form-control @error('password') is-invalid @enderror" name="password"
+                                                required>
+                                            @error('password')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
 
@@ -59,17 +76,30 @@
                                     <div class="row">
                                         <div class="form-group col-6">
                                             <label class="mb-2">Asal Kampus</label>
-                                            <select class="form-control mb-3 selected">
-                                                <option>Politeknik Pos Indonesia</option>
-                                                <option>Telkom University</option>
+                                            <select class="form-control mb-3 selected @error('campus') is-invalid @enderror"
+                                                name="campus">
+                                                <option value="Politeknik Pos Indonesia">Politeknik Pos Indonesia</option>
+                                                <option value="Telkom">Telkom University</option>
                                             </select>
+                                            @error('campus')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-6">
                                             <label class="mb-2">Semester</label>
-                                            <select class="form-control mb-3 selected">
-                                                <option>3</option>
-                                                <option>5</option>
+                                            <select
+                                                class="form-control mb-3 selected @error('semester') is-invalid @enderror"
+                                                name="semester">
+                                                <option value="3">3</option>
+                                                <option value="5">5</option>
                                             </select>
+                                            @error('semester')
+                                                <div class="invalid-feedback mb-3">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
 
