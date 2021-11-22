@@ -21,9 +21,30 @@
                 <li class="nav-item">
                     <a class="nav-link link tebel-sedang" href="#">Contact &nbsp;&nbsp;</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active tebel-sedang rounded-pill bg-ungu shadow" href="/login">Login</a>
-                </li>
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Welcome Back, {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">My Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link active tebel-sedang rounded-pill bg-ungu shadow" href="/login">Login</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>

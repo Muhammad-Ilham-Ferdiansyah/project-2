@@ -14,18 +14,33 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
-
                         @endif
+
+                        @if (session()->has('loginError'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                {{ session('loginError') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
+
                         <div class="card card-primary">
                             <div class="card-header text-center">
                                 <h4 class="mt-3 text-uppercase tebel-sedang">Login</h4>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="#" class="needs-validation" novalidate="">
+                                <form method="post" action="/login">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="email" class="mb-2">Email</label>
-                                        <input id="email" type="email" class="form-control" name="email" required
-                                            autofocus>
+                                        <input id="email" type="email"
+                                            class="form-control @error('email') is-invalid @enderror" name="email"
+                                            value="{{ old('email') }}" required autofocus>
+                                        @error('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group mb-2">
                                         <div class="d-block">
