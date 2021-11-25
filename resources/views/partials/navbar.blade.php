@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light mt-4">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand m-3" href="/">
             SIPMA BUMN

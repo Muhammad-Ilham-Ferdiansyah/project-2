@@ -4,7 +4,7 @@
 
     <div id="app">
         <section class="section">
-            <div class="container mt-4 mb-4">
+            <div class="container mt-2 mb-4">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="card card-primary">
